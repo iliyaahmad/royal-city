@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal City | VMP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">RC</div>
+        <div><b>ROYAL CITY</b><span>VMP ROLEPLAY</span></div>
+      </div>
+      <div class="links">
+        <a href="#home">خانه</a>
+        <a href="#features">امکانات</a>
+        <a href="#rules">قوانین</a>
+        <a href="#shop">فروشگاه</a>
+      </div>
+      <a class="discord" href="https://discord.com/" target="_blank">دیسکورد</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="glow"></div>
+      <div class="hero-content">
+        <div class="badge">VMP ROLEPLAY • ONLINE</div>
+        <h1>به <span>Royal City</span> خوش آمدید</h1>
+        <p>تجربه‌ای متفاوت از رول‌پلی، رقابت و زندگی شهری در سرور VMP.</p>
+        <div class="actions">
+          <a class="primary" href="#connect">ورود به سرور</a>
+          <a class="secondary" href="#features">بیشتر بدانید</a>
+        </div>
+      </div>
+      <div class="server-card" id="connect">
+        <div class="card-top"><span class="dot"></span> وضعیت سرور</div>
+        <div class="online">ONLINE</div>
+        <div class="players"><strong id="players">128</strong><span>/ 500 پلیر</span></div>
+        <div class="bar"><i id="bar"></i></div>
+        <button onclick="copyIP()">کپی آدرس سرور</button>
+        <small id="copyText">connect YOUR_SERVER_IP</small>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>24/7</strong><span>فعالیت سرور</span></div>
+      <div><strong>500+</strong><span>ظرفیت پلیر</span></div>
+      <div><strong>VMP</strong><span>پلتفرم</span></div>
+      <div><strong>IR</strong><span>جامعه فارسی</span></div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-title"><span>FEATURES</span><h2>چرا Royal City؟</h2></div>
+      <div class="grid">
+        <article><b>🎭 رول‌پلی واقعی</b><p>سیستم‌های متنوع برای تجربه‌ای عمیق و جذاب.</p></article>
+        <article><b>🚓 فکشن‌های فعال</b><p>پلیس، امداد، گنگ‌ها و شغل‌های مختلف.</p></article>
+        <article><b>⚡ عملکرد سریع</b><p>ساختار بهینه برای تجربه روان‌تر بازیکنان.</p></article>
+        <article><b>🛡️ تیم مدیریت</b><p>پشتیبانی و مدیریت منظم برای حفظ کیفیت سرور.</p></article>
+      </div>
+    </section>
+
+    <section id="rules" class="section dark">
+      <div class="section-title"><span>RULES</span><h2>قوانین سرور</h2></div>
+      <div class="rules">
+        <div><b>01</b><p>احترام به بازیکنان و تیم مدیریت الزامی است.</p></div>
+        <div><b>02</b><p>استفاده از چیت و نرم‌افزارهای غیرمجاز ممنوع است.</p></div>
+        <div><b>03</b><p>از خراب کردن تجربه رول‌پلی سایر بازیکنان خودداری کنید.</p></div>
+        <div><b>04</b><p>قوانین کامل را قبل از ورود به سرور مطالعه کنید.</p></div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="section-title"><span>STORE</span><h2>فروشگاه</h2></div>
+      <div class="shop">
+        <article><span>VIP</span><h3>VIP GOLD</h3><strong>250,000 تومان</strong><button>مشاهده</button></article>
+        <article><span>VIP</span><h3>VIP DIAMOND</h3><strong>450,000 تومان</strong><button>مشاهده</button></article>
+        <article><span>COIN</span><h3>ROYAL COIN</h3><strong>100,000 تومان</strong><button>مشاهده</button></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><div class="logo">RC</div><div><b>ROYAL CITY</b><span>VMP ROLEPLAY</span></div></div>
+    <p>© 2026 Royal City — تمامی حقوق محفوظ است.</p>
+  </footer>
+
+  <script>
+    const maxPlayers = 500;
+    const currentPlayers = 128;
+    document.getElementById('players').textContent = currentPlayers;
+    document.getElementById('bar').style.width = (currentPlayers / maxPlayers * 100) + '%';
+
+    function copyIP() {
+      const ip = 'YOUR_SERVER_IP';
+      navigator.clipboard?.writeText(ip);
+      document.getElementById('copyText').textContent = 'آدرس کپی شد: ' + ip;
+    }
+  </script>
+</body>
+</html>
